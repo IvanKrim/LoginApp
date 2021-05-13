@@ -53,7 +53,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Forgot User Name?"/>
                                         <connections>
-                                            <action selector="forgotButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M9X-Fh-mu9"/>
+                                            <action selector="forgotButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CYI-wt-4r1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylL-rr-tTw">
@@ -61,7 +61,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Forgot Password? "/>
                                         <connections>
-                                            <action selector="forgotButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sSs-yK-NEz"/>
+                                            <action selector="forgotButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nNa-sg-ASA"/>
                                         </connections>
                                     </button>
                                 </subviews>
