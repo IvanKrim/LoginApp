@@ -7,13 +7,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
+    @IBOutlet var userTF: UITextField!
+    @IBOutlet var passwordTF: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func loginPressed(_ sender: Any) {
+    }
+    
 }
 
