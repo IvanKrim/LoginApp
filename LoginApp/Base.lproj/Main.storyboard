@@ -41,8 +41,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Ks-Z6-s2M"/>
-                                    <segue destination="AYO-u1-OPi" kind="presentation" modalPresentationStyle="fullScreen" id="0la-Vn-wz7"/>
+                                    <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="JAC-R0-3t6"/>
+                                    <segue destination="AYO-u1-OPi" kind="presentation" modalPresentationStyle="fullScreen" id="3bs-h7-xu7"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="xfm-dZ-HEY">
@@ -52,11 +52,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="143.5" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Forgot User Name?"/>
+                                        <connections>
+                                            <action selector="forgotButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M9X-Fh-mu9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylL-rr-tTw">
                                         <rect key="frame" x="143.5" y="0.0" width="136.5" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Forgot Password? "/>
+                                        <connections>
+                                            <action selector="forgotButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sSs-yK-NEz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -105,6 +111,9 @@
                                     <constraint firstAttribute="height" constant="40" id="eFX-Yv-CSs"/>
                                 </constraints>
                                 <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="logOutPressed" destination="AYO-u1-OPi" eventType="touchUpInside" id="aPs-J2-hPI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dQX-T7-iij"/>
@@ -118,6 +127,9 @@
                             <constraint firstItem="dQX-T7-iij" firstAttribute="trailing" secondItem="OPo-5P-ywt" secondAttribute="trailing" constant="20" id="jyj-Jj-9eJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="userNameLabel" destination="5jw-fs-zbP" id="d8g-dz-lNs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ye-fb-cGK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
