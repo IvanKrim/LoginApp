@@ -24,6 +24,11 @@ class LoginViewController: UIViewController {
     private let user = "User"
     private let password = "123321"
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.userName = user
@@ -33,9 +38,11 @@ class LoginViewController: UIViewController {
         if userTF.text != user || passwordTF.text != password {
             showAlert(
                 title: "Incorrect username or password",
-                message: "Please try again"
+                message: "Please try again",
+                textField: passwordTF
             )
             return
+            
         }
         performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
@@ -50,16 +57,34 @@ class LoginViewController: UIViewController {
         userTF.text = ""
         passwordTF.text = ""
     }
-  
+    
 }
 
 extension LoginViewController {
-    private func showAlert(title: String, message: String) {
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            
+            textField?.text = ""
         }
         alert.addAction(okAction)
         present(alert, animated: true)
     }
 }
+
+extension LoginViewController: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userTF {
+            passwordTF.becomeFirstResponder()
+        } else {
+            logInPressed()
+        }
+        return true
+    }
+}
+
+
