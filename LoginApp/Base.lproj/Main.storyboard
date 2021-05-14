@@ -22,12 +22,12 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pmE-4s-HrH">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8iQ-tW-xR3">
                                         <rect key="frame" x="0.0" y="54" width="280" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" smartDashesType="no" textContentType="password"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -42,26 +42,25 @@
                                 </state>
                                 <connections>
                                     <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="JAC-R0-3t6"/>
-                                    <segue destination="AYO-u1-OPi" kind="presentation" modalPresentationStyle="fullScreen" id="3bs-h7-xu7"/>
+                                    <segue destination="AYO-u1-OPi" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="3bs-h7-xu7"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="xfm-dZ-HEY">
-                                <rect key="frame" x="20" y="268" width="280" height="29"/>
+                                <rect key="frame" x="20" y="268" width="280" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdI-Vq-I2J">
-                                        <rect key="frame" x="0.0" y="0.0" width="143.5" height="29"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="139.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Forgot User Name?"/>
                                         <connections>
-                                            <action selector="forgotButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CYI-wt-4r1"/>
+                                            <action selector="forgotButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6fl-gX-xVb"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylL-rr-tTw">
-                                        <rect key="frame" x="143.5" y="0.0" width="136.5" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <state key="normal" title="Forgot Password? "/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46m-L7-kMg">
+                                        <rect key="frame" x="139.5" y="0.0" width="140.5" height="30"/>
+                                        <state key="normal" title="Forgot password? "/>
                                         <connections>
-                                            <action selector="forgotButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nNa-sg-ASA"/>
+                                            <action selector="forgotButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lCl-DA-WOh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -113,6 +112,7 @@
                                 <state key="normal" title="Log out"/>
                                 <connections>
                                     <action selector="logOutPressed" destination="AYO-u1-OPi" eventType="touchUpInside" id="aPs-J2-hPI"/>
+                                    <segue destination="ZhN-Cg-PAT" kind="unwind" unwindAction="unwindSegueWithSegue:" id="kCL-rS-s8r"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -132,6 +132,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ye-fb-cGK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ZhN-Cg-PAT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="887" y="116"/>
         </scene>

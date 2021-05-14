@@ -24,17 +24,10 @@ class LoginViewController: UIViewController {
     private let user = "User"
     private let password = "123321"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.userName = user
-        
     }
-    
     
     @IBAction func logInPressed() {
         if userTF.text != user || passwordTF.text != password {
@@ -42,16 +35,22 @@ class LoginViewController: UIViewController {
                 title: "Incorrect username or password",
                 message: "Please try again"
             )
+            return
         }
-        
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
     
-    @IBAction func forgotButtonsPressed(_ sender: UIButton) {
-        sender.tag == 0 ? showAlert(title: "Forgot your username?", message: "Your login is \(user)" ) : showAlert(title: "Forgot your password?", message: "Your password is \(password)")
+    @IBAction func forgotButtonPressed(_ sender: UIButton) {
+        sender.tag == 0
+            ? showAlert(title: "Forgot User Name?", message: "Your User name is: \(user)")
+            : showAlert(title: "Forgot password?", message: "Your password is: \(password)")
     }
     
-   
-    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        userTF.text = ""
+        passwordTF.text = ""
+    }
+  
 }
 
 extension LoginViewController {
