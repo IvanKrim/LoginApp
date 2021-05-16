@@ -17,7 +17,5 @@ class UserInfoViewController: UIViewController {
         super.viewDidLoad()
         
         userNameLabel.text = userName
-
     }
-
 }

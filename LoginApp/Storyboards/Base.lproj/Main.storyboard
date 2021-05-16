@@ -151,11 +151,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JO8-2P-BMp">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_3653 2" translatesAutoresizingMaskIntoConstraints="NO" id="JO8-2P-BMp">
                                 <rect key="frame" x="20" y="64" width="280" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="JO8-2P-BMp" secondAttribute="height" multiplier="1:1" id="5nr-8H-A3o"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JSv-E6-MIL">
                                 <rect key="frame" x="20" y="384" width="187" height="63.5"/>
@@ -289,6 +294,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="IMG_3653 2" width="1547" height="1547"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
