@@ -64,7 +64,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         userTF.text = ""
-        passwordTF.text = ""
+        passwordTF.text = "" 
     }
     
 }
