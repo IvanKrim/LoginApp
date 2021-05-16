@@ -14,6 +14,7 @@
 		0E4E178C264D512E0091798D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E4E178B264D512E0091798D /* Assets.xcassets */; };
 		0E4E178F264D512E0091798D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4E178D264D512E0091798D /* LaunchScreen.storyboard */; };
 		0E4E1797264D52B80091798D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E1796264D52B80091798D /* WelcomeViewController.swift */; };
+		0E4E17C12651838D0091798D /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E17C02651838D0091798D /* UserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0E4E178E264D512E0091798D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E4E1790264D512E0091798D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E4E1796264D52B80091798D /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		0E4E17C02651838D0091798D /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,41 @@
 		0E4E1781264D512B0091798D /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
-				0E4E1782264D512B0091798D /* AppDelegate.swift */,
-				0E4E1784264D512B0091798D /* SceneDelegate.swift */,
-				0E4E1786264D512B0091798D /* LoginViewController.swift */,
-				0E4E1796264D52B80091798D /* WelcomeViewController.swift */,
-				0E4E1788264D512B0091798D /* Main.storyboard */,
+				0E4E17C32651894F0091798D /* ViewControllers */,
+				0E4E17C42651896A0091798D /* Storyboards */,
+				0E4E17C2265189410091798D /* Supporting */,
 				0E4E178B264D512E0091798D /* Assets.xcassets */,
-				0E4E178D264D512E0091798D /* LaunchScreen.storyboard */,
-				0E4E1790264D512E0091798D /* Info.plist */,
 			);
 			path = LoginApp;
+			sourceTree = "<group>";
+		};
+		0E4E17C2265189410091798D /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				0E4E1782264D512B0091798D /* AppDelegate.swift */,
+				0E4E1784264D512B0091798D /* SceneDelegate.swift */,
+				0E4E1790264D512E0091798D /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		0E4E17C32651894F0091798D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0E4E1786264D512B0091798D /* LoginViewController.swift */,
+				0E4E17C02651838D0091798D /* UserInfoViewController.swift */,
+				0E4E1796264D52B80091798D /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0E4E17C42651896A0091798D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0E4E1788264D512B0091798D /* Main.storyboard */,
+				0E4E178D264D512E0091798D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +173,7 @@
 			files = (
 				0E4E1787264D512B0091798D /* LoginViewController.swift in Sources */,
 				0E4E1797264D52B80091798D /* WelcomeViewController.swift in Sources */,
+				0E4E17C12651838D0091798D /* UserInfoViewController.swift in Sources */,
 				0E4E1783264D512B0091798D /* AppDelegate.swift in Sources */,
 				0E4E1785264D512B0091798D /* SceneDelegate.swift in Sources */,
 			);
@@ -296,7 +324,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L3S8MU2XD5;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +343,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L3S8MU2XD5;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

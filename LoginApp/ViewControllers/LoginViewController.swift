@@ -21,17 +21,26 @@ class LoginViewController: UIViewController {
     @IBOutlet var userTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let user = "User"
-    private let password = "123321"
+    private let user = "1"
+    private let password = "1"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = user
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userName = user
+            } else if let navigationVC = viewController as? UINavigationController {
+                let userInfoVC = navigationVC.topViewController as! UserInfoViewController
+                userInfoVC.userName = user
+            }
+        }
     }
     
     @IBAction func logInPressed() {
