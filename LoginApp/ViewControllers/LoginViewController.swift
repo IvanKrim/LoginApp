@@ -21,8 +21,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var userTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let user = "1"
-    private let password = "1"
+    let user = User.getUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,16 +34,16 @@ class LoginViewController: UIViewController {
         
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userName = user
-            } else if let navigationVC = viewController as? UINavigationController {
-                let userInfoVC = navigationVC.topViewController as! UserInfoViewController
-                userInfoVC.userName = user
+                welcomeVC.userName = user.fullName
+//            } else if let navigationVC = viewController as? UINavigationController {
+//                let userInfoVC = navigationVC.topViewController as! UserInfoViewController
+//                userInfoVC.userName = user.fullName
             }
         }
     }
     
     @IBAction func logInPressed() {
-        if userTF.text != user || passwordTF.text != password {
+        if userTF.text != user.login || passwordTF.text != user.password {
             showAlert(
                 title: "Incorrect username or password",
                 message: "Please try again",
@@ -58,13 +57,13 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotButtonPressed(_ sender: UIButton) {
         sender.tag == 0
-            ? showAlert(title: "Forgot User Name?", message: "Your User name is: \(user)")
-            : showAlert(title: "Forgot password?", message: "Your password is: \(password)")
+            ? showAlert(title: "Forgot User Name?", message: "Your User name is: \(user.login)")
+            : showAlert(title: "Forgot password?", message: "Your password is: \(user.password)")
     }
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         userTF.text = ""
-        passwordTF.text = "" 
+        passwordTF.text = ""
     }
     
 }
