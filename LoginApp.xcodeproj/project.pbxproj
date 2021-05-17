@@ -15,6 +15,8 @@
 		0E4E178F264D512E0091798D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4E178D264D512E0091798D /* LaunchScreen.storyboard */; };
 		0E4E1797264D52B80091798D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E1796264D52B80091798D /* WelcomeViewController.swift */; };
 		0E4E17C12651838D0091798D /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E17C02651838D0091798D /* UserInfoViewController.swift */; };
+		0E4E17C6265191000091798D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E17C5265191000091798D /* WebViewController.swift */; };
+		0E4E17C82651AA170091798D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E17C72651AA170091798D /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		0E4E1790264D512E0091798D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E4E1796264D52B80091798D /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		0E4E17C02651838D0091798D /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		0E4E17C5265191000091798D /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		0E4E17C72651AA170091798D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		0E4E1781264D512B0091798D /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
+				0E4E17C92651AA200091798D /* Model */,
 				0E4E17C32651894F0091798D /* ViewControllers */,
 				0E4E17C42651896A0091798D /* Storyboards */,
 				0E4E17C2265189410091798D /* Supporting */,
@@ -82,8 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				0E4E1786264D512B0091798D /* LoginViewController.swift */,
-				0E4E17C02651838D0091798D /* UserInfoViewController.swift */,
 				0E4E1796264D52B80091798D /* WelcomeViewController.swift */,
+				0E4E17C02651838D0091798D /* UserInfoViewController.swift */,
+				0E4E17C5265191000091798D /* WebViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -95,6 +101,14 @@
 				0E4E178D264D512E0091798D /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0E4E17C92651AA200091798D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E4E17C72651AA170091798D /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,10 +186,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E4E1787264D512B0091798D /* LoginViewController.swift in Sources */,
+				0E4E17C6265191000091798D /* WebViewController.swift in Sources */,
 				0E4E1797264D52B80091798D /* WelcomeViewController.swift in Sources */,
 				0E4E17C12651838D0091798D /* UserInfoViewController.swift in Sources */,
 				0E4E1783264D512B0091798D /* AppDelegate.swift in Sources */,
 				0E4E1785264D512B0091798D /* SceneDelegate.swift in Sources */,
+				0E4E17C82651AA170091798D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

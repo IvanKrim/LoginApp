@@ -8,16 +8,24 @@
 import UIKit
 
 class UserInfoViewController: UIViewController {
-
-    var userName: String!
     
     @IBOutlet var userNameLabel: UILabel!
+    @IBOutlet var userSurnameLabel: UILabel!
+    @IBOutlet var userAgeLabel: UILabel!
+    @IBOutlet var userAvatarImage: UIImageView! {
+        didSet {
+            userAvatarImage.layer.cornerRadius = userAvatarImage.frame.height * 0.1
+        }
+    }
+    
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userNameLabel.text = userName
-
+        userNameLabel.text = user.person.name
+        userSurnameLabel.text = user.person.surname
+        userAgeLabel.text = user.person.age
+        userAvatarImage.image = UIImage(named: user.person.avatarImage)
     }
-
 }
