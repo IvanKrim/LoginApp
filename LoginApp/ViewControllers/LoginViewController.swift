@@ -7,9 +7,9 @@
 
 // MARK: - IB Outlets
 // MARK: - Public Properties
-// MARK: - Private Properties
+
 // MARK: - Initializers
-// MARK: - Override Methods
+
 // MARK: - IB Action
 // MARK: - Public Methods
 // MARK: - Private Methods
@@ -18,30 +18,37 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    // MARK: - IB Outlets
     @IBOutlet var userTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    let user = User.getUser()
+    // MARK: - Private Properties
+    private let user = User.getUserData()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
+    // MARK: - Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarController.viewControllers else { return }
         
-        for viewController in viewControllers {
-            if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userName = user.fullName
-//            } else if let navigationVC = viewController as? UINavigationController {
-//                let userInfoVC = navigationVC.topViewController as! UserInfoViewController
-//                userInfoVC.userName = user.fullName
+        viewControllers.forEach {
+            if let welcomeVC = $0 as? WelcomeViewController {
+                welcomeVC.user = user
+            } else if let navigationVC = $0 as? UINavigationController {
+                let userInfoVC = navigationVC.topViewController as! UserInfoViewController
+                userInfoVC.user = user
             }
+            
+            //        for viewController in viewControllers {
+            //            if let welcomeVC = viewController as? WelcomeViewController {
+            //                welcomeVC.user = user
+            //            } else if let navigationVC = viewController as? UINavigationController {
+            //                let userInfoVC = navigationVC.topViewController as! UserInfoViewController
+            //                userInfoVC.user = user
+            //            }
         }
     }
     
+    // MARK: - IB Action
     @IBAction func logInPressed() {
         if userTF.text != user.login || passwordTF.text != user.password {
             showAlert(
@@ -65,7 +72,6 @@ class LoginViewController: UIViewController {
         userTF.text = ""
         passwordTF.text = ""
     }
-    
 }
 
 extension LoginViewController {

@@ -135,7 +135,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Welcome" image="clock" catalog="system" id="BHY-TW-tee"/>
                     <connections>
-                        <outlet property="userNameLabel" destination="5jw-fs-zbP" id="d8g-dz-lNs"/>
+                        <outlet property="welcomeLabel" destination="5jw-fs-zbP" id="d8g-dz-lNs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ye-fb-cGK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -151,16 +151,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_3653 2" translatesAutoresizingMaskIntoConstraints="NO" id="JO8-2P-BMp">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JO8-2P-BMp">
                                 <rect key="frame" x="20" y="64" width="280" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="JO8-2P-BMp" secondAttribute="height" multiplier="1:1" id="5nr-8H-A3o"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JSv-E6-MIL">
                                 <rect key="frame" x="20" y="364" width="187" height="124.5"/>
@@ -251,6 +246,7 @@
                     <navigationItem key="navigationItem" id="OM6-5h-XDf"/>
                     <connections>
                         <outlet property="userAgeLabel" destination="31a-J5-W9H" id="ebE-S6-Dfr"/>
+                        <outlet property="userAvatarImage" destination="JO8-2P-BMp" id="Eej-RO-Uie"/>
                         <outlet property="userNameLabel" destination="EU2-tj-VKL" id="rwK-9k-2g8"/>
                         <outlet property="userSurnameLabel" destination="ld7-VU-Gfp" id="iLx-Zh-NDH"/>
                     </connections>
@@ -297,6 +293,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Vuv-5W-xZU" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bbv-2c-GuE">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -330,7 +327,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IMG_3653 2" width="1547" height="1547"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
